@@ -11,10 +11,10 @@ environment, namely Monte-Carlo and Temporal-Difference learning. In the followi
 function R of the environment, and try to find the optimal policy π by sampling episodes in it. Consider an agent moving inside this maze, trying to get the best possible reward. To do so, it can
 choose at any time-step between four actions:
 
-• a0 = going north of its current state
-• a1 = going east of its current state
-• a2 = going south of its current state
-• a3 = going west of its current state
+- a0 = going north of its current state
+- a1 = going east of its current state
+- a2 = going south of its current state
+- a3 = going west of its current state
 
 The chosen action has a probability p to succeed and lead to the expected direction. If it fails, it has equal probability to lead to any other direction. For 
 example, if the agent chooses the action a0 = going north, it is going to succeed and go north with probability p, and it has probability 1−p/3 to go east, probability
