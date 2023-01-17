@@ -6,7 +6,7 @@ The focus of this Coursework is the resolution of a Maze environment, illustrate
 black squares symbolise obstacles, and the dark-grey squares absorbing states, that correspond to specific rewards. Absorbing states are terminal states, there is no 
 transition from an absorbing state to any other state.
 
-![Figure 1]([https://github.com/gaia2510/reinforcement-learning/blob/main/maze%20cw%20fig.PNG])
+![Figure 1](https://github.com/gaia2510/reinforcement-learning/blob/main/maze%20cw%20fig.PNG)
 
 This environment shares a lot of similarities with the Grid World environment studied in Tutorial 2, you are allowed to reuse any code you might have developed for 
 this tutorial. However, unlike the Tutorial, this Coursework aims to help you implement RL techniques that do not require full knowledge of the dynamic of the 
