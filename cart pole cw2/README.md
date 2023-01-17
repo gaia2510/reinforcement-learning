@@ -74,7 +74,7 @@ The function loss() computes the Bellman error for a batch of transitions. loss 
 two-dimensional) tensors with states, actions, rewards, next states and ‘dones’ in that order. For reference, the loss for a batch B of size N is computed according 
 to the formula:
 
-![equation]()
+![equation](https://github.com/gaia2510/reinforcement-learning/blob/main/cart%20pole%20cw2/loss%20function%20latex.png)
 
 with Q the first (policy) DQN, Qˆ the second (target) DQN. This implementation carries out the sum in parallel (as a batch) rather than looping through each 
 transition, as this enables training to be much faster.
