@@ -39,7 +39,7 @@ includes the following methods:
 - push() method: Adds the object that is passed as input to the replay buffer’s memory. If an item is added when the replay buffer is at full capacity, it discards 
 the oldest item it has in memory and replaces it with the newest. This method returns the updated replay buffer’s memory (an iterable object that contains the objects
 pushed to it as elements).
-- sample() method: It returns an iterable object of items uniformly sampled (without replacement) from the replay buffer’s memory. It takes as parameter an integer 
+- sample() method: It returns an iterable object of items uniformly sampled (without replacement) from the replay buffer’s memory. It takes as parameter an integer 
 defining the number of samples to be returned.
 
 ### Defining a DQN
@@ -54,7 +54,7 @@ batch tensor of shape (N, 2) the output should have shape (N, 1). The DQN also h
 ### Action selection
 
 The function greedy_action() takes two parameters as input: a DQN object and a (non-batched) state tensor and returns the integer corresponding to the greedy action 
-at the given state according to the DQN.
+at the given state according to the DQN.
 
 ### ε-greedy policy
 
