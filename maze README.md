@@ -5,6 +5,9 @@
 The focus of this Coursework is the resolution of a Maze environment, illustrated in Figure 1 and model as a Markov Decision Process (MDP). In this illustration, the
 black squares symbolise obstacles, and the dark-grey squares absorbing states, that correspond to specific rewards. Absorbing states are terminal states, there is no 
 transition from an absorbing state to any other state.
+
+![Model](Paste_link_here)
+
 This environment shares a lot of similarities with the Grid World environment studied in Tutorial 2, you are allowed to reuse any code you might have developed for 
 this tutorial. However, unlike the Tutorial, this Coursework aims to help you implement RL techniques that do not require full knowledge of the dynamic of the 
 environment, namely Monte-Carlo and Temporal-Difference learning. In the following, we will thus assume we don’t have access to the transition matrix T and reward
@@ -27,8 +30,8 @@ probability 1/Nstart−states. The possible start states are indicated on the Ma
 
 This environment is personalised by your College ID (CID) number, specifically the last 2 digits (which we refer to as y and z), as follow:
 
-• The probability p is set as p = 0.8 + 0.02 × (9 − y).
-• The discount factor γ is set as γ = 0.8 + 0.02 × y.
-• The reward state is Ri with i = z mod 4 (meaning that if z = 0 or z = 4 or z = 8, the reward state would be R0, if z = 1 or z = 5 or z = 9, it would be R1, etc).
-• The reward state Ri gives a reward r = 500 and all the other absorbing states gives a reward r = −50. As stated before, any action performed by the agent in the 
+- The probability p is set as p = 0.8 + 0.02 × (9 − y).
+- The discount factor γ is set as γ = 0.8 + 0.02 × y.
+- The reward state is Ri with i = z mod 4 (meaning that if z = 0 or z = 4 or z = 8, the reward state would be R0, if z = 1 or z = 5 or z = 9, it would be R1, etc).
+- The reward state Ri gives a reward r = 500 and all the other absorbing states gives a reward r = −50. As stated before, any action performed by the agent in the 
 environment also gives it a reward of −1.
