@@ -1,5 +1,3 @@
-# reinforcement-learning
-
 # Description of the Maze environment:
 
 The focus of this Coursework is the resolution of a Maze environment, illustrated in Figure 1 and model as a Markov Decision Process (MDP). In this illustration, the
