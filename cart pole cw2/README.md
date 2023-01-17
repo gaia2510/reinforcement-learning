@@ -5,7 +5,7 @@ left or right direction. Please see Fig.1 for an illustration. The aim is to tra
 control the magnitude of force we apply to the cart, only the direction. The optimal policy will account for deviations from the upright position and push the cartpole 
 such that it remains balanced.
 
-![equation](https://github.com/gaia2510/reinforcement-learning/blob/main/cart%20pole%20cw2/loss%20function%20latex.png)
+![Figure 1](https://github.com/gaia2510/reinforcement-learning/blob/main/cart%20pole%20cw2/fig%201%20cart%20pole.PNG)
 
 Figure 1: Illustration of the OpenAI Gym CartPole environment.
 
@@ -25,19 +25,16 @@ Recall from the lectures, a DQN is a neural network designed to predict the Q fu
 provided works on the Gym “CartPole” environment. Please see Fig. 2 for an example. The first layer takes as input the observed state. The number of outputs in the 
 final layer of the network must be the same number of actions the agent can perform. This is how the state-action values are encoded in the neural network: the DQN
 takes a state as input, and its nth output neuron’s value is the learned Q-value at the input state for the nth action.
-The code provided alongside this assignment contains a PyTorch implementation of a simple DQN architecture, along with sample plotting and visualisation code, and trains 
-the model to predict the action the agent should take to balance the cart pole. However, the model is not optimised and therefore does not converge to consistently 
-balance the pole. Below, you can find a description of the functions and classes included in utils.py. You are strongly suggested to understand how these are implemented,
-and you may modify these as you wish.
+The code provided alongside this assignment contains a PyTorch implementation of a simple DQN architecture, along with sample plotting and visualisation code, and trains the model to predict the action the agent should take to balance the cart pole. However, the model is not optimised and therefore does not converge to consistently balance the pole. Below, you can find a description of the functions and classes included in utils.py. You are strongly suggested to understand how these are implemented, and you may modify these as you wish.
 
-Figure 2: Diagram of a DQN with input layers and output layers matching those required for this
-environment. Please note, you decide the parameters for the hidden layers (i.e., number of layers and
-number of parameters per layer).
+![Figure 2](https://github.com/gaia2510/reinforcement-learning/blob/main/cart%20pole%20cw2/fig%202%20cart%20pole.PNG)
+
+Figure 2: Diagram of a DQN with input layers and output layers matching those required for this environment. Please note, you decide the parameters for the hidden layers (i.e., number of layers and number of parameters per layer).
 
 ### Replay buffer
 
-A replay buffer is implemented in the ReplayBuffer class. At initialisation it takes an integer as
-argument which is the maximum number of transitions it can hold. It includes the following methods:
+A replay buffer is implemented in the ReplayBuffer class. At initialisation it takes an integer as argument which is the maximum number of transitions it can hold. It
+includes the following methods:
 
 - push() method: Adds the object that is passed as input to the replay buffer’s memory. If an item is added when the replay buffer is at full capacity, it discards 
 the oldest item it has in memory and replaces it with the newest. This method returns the updated replay buffer’s memory (an iterable object that contains the objects
