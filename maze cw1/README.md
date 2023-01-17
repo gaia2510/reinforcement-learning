@@ -4,7 +4,7 @@ The focus of this Coursework is the resolution of a Maze environment, illustrate
 black squares symbolise obstacles, and the dark-grey squares absorbing states, that correspond to specific rewards. Absorbing states are terminal states, there is no 
 transition from an absorbing state to any other state.
 
-![Figure 1](https://github.com/gaia2510/reinforcement-learning/blob/main/maze%20cw%20fig.PNG)
+![Figure 1](https://github.com/gaia2510/reinforcement-learning/blob/main/maze%20cw%20fig.PNG)](https://github.com/gaia2510/reinforcement-learning/blob/main/maze%20cw1/maze%20cw%20fig.PNG)
 
 Figure 1: Illustration of the Maze environment, the focus of this Coursework. The absorbing states are indicated as ”Ri”, they correspond to absorbing rewards. The 
 ”S” indicate the potential start states.
