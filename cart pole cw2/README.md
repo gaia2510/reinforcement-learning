@@ -1,11 +1,11 @@
-# Overview
-
 # Problem Description
 
 Your goal is to train an agent to balance a pole attached (by a frictionless joint) to a moving (frictionless) cart by applying a fixed force to the cart in either the 
 left or right direction. Please see Fig.1 for an illustration. The aim is to train the DQN to keep the pole balanced (upright) for as many steps as possible. We do not 
 control the magnitude of force we apply to the cart, only the direction. The optimal policy will account for deviations from the upright position and push the cartpole 
 such that it remains balanced.
+
+![equation](https://github.com/gaia2510/reinforcement-learning/blob/main/cart%20pole%20cw2/loss%20function%20latex.png)
 
 Figure 1: Illustration of the OpenAI Gym CartPole environment.
 
@@ -19,7 +19,7 @@ each step taken (including final step) a reward of +1 is returned. The environme
 - cart distance from centre greater than ±2.4,
 - or the number of steps exceeds 500.
 
-## DQN Implementation
+### DQN Implementation
 
 Recall from the lectures, a DQN is a neural network designed to predict the Q function (for all the possible actions) of the environment given a state vector. The DQN
 provided works on the Gym “CartPole” environment. Please see Fig. 2 for an example. The first layer takes as input the observed state. The number of outputs in the 
@@ -34,7 +34,7 @@ Figure 2: Diagram of a DQN with input layers and output layers matching those re
 environment. Please note, you decide the parameters for the hidden layers (i.e., number of layers and
 number of parameters per layer).
 
-## Replay buffer
+### Replay buffer
 
 A replay buffer is implemented in the ReplayBuffer class. At initialisation it takes an integer as
 argument which is the maximum number of transitions it can hold. It includes the following methods:
@@ -45,7 +45,7 @@ pushed to it as elements).
 - sample() method: It returns an iterable object of items uniformly sampled (without replacement) from the replay buffer’s memory. It takes as parameter an integer 
 defining the number of samples to be returned.
 
-## Defining a DQN
+### Defining a DQN
 
 The DQN class (inherited from nn.Module) that will be your multi-layer DQN perceptron. It includes the following __init__() and forward() methods:
 
@@ -54,21 +54,21 @@ and 2 hidden layers of size 50 will take the list [2,50, 50, 1] as initialisatio
 - forward(): Implements a batched forward pass through the neural network, using a ReLU activation function. Carrying forward the example from above, for an input 
 batch tensor of shape (N, 2) the output should have shape (N, 1). The DQN also handles non-batched states: so for an input of size (2,) the output is of size (1,).
 
-## Action selection
+### Action selection
 
 The function greedy_action() takes two parameters as input: a DQN object and a (non-batched) state tensor and returns the integer corresponding to the greedy action 
 at the given state according to the DQN.
 
-## ε-greedy policy
+### ε-greedy policy
 
 The function epsilon_greedy() takes three parameters as input: an epsilon float, a DQN object and a (non-batched) state tensor. epsilon_greedy() returns an integer 
 representing a stochastic sample of the epsilon greedy action at that state according to the DQN.
 
-## Target network
+### Target network
 
 The function update_target() takes two DQN objects as arguments, and updates the parameters of the first one copying the weights and biases from the second.
 
-## Loss calculation
+### Loss calculation
 
 The function loss() computes the Bellman error for a batch of transitions. loss takes 7 arguments: two DQN objects (a policy and target network) and batched (i.e. 
 two-dimensional) tensors with states, actions, rewards, next states and ‘dones’ in that order. For reference, the loss for a batch B of size N is computed according 
